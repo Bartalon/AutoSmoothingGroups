@@ -56,7 +56,7 @@ global proc dp_autoSG() {
 
 			dp_reinstateMainProgressBar();
 
-			if ( dp_getVersion() > 2015 ) {
+			if ( dp_getVersion() > 2017 ) {
 				print ("\nThe model " + $obj + " has " + dp_countUVShells($obj) + " UV shells.\n");
 			}
 			else {
@@ -91,7 +91,16 @@ global proc int dp_getVersion() {
 	string $info = `about -v`;
 	string $buffer[];
 	tokenize $info " " $buffer;
+
 	string $yr = $buffer[0];
+
+	if ( $yr == "2017" ) {
+		string $installedVersion = `about -iv`;
+		if ( `match "Update 5" $installedVersion` == "Update 5" ) {
+			$yr = "20175";
+		}
+	}
+
 	return ((int)$yr);
 }
 
@@ -135,7 +144,7 @@ global proc dp_toEdgePerimeter() {
 
 global proc int dp_countUVShells(string $obj) {
 	int $shellCount[];
-	if ( dp_getVersion() > 2016 ) { $shellCount = eval( "polyEvaluate -us " + $obj ); }
+	if ( dp_getVersion() > 2017 ) { $shellCount = eval( "polyEvaluate -us " + $obj ); }
 	else {
 
 	}
