@@ -1,0 +1,27 @@
+Thank you for downloading the AutoSmoothingGroups script for Maya!
+
+
+///////////  Installation
+
+1.  	Exit Maya
+
+2.  	Navigate to your local "My Documents" Maya directory, which should look something like:   C:\Users\Dennis\Documents\maya\2018\prefs
+			The number in this directory path will reflect which version of Maya you are using.  It may be 2013-x64, 2016.5, 2017LT, etc.
+
+3.  	Paste dp_autoSmoothingGroups.mel into the   \maya\2018\prefs\scripts   directory.
+			Note that the scripts directory in this step refers to the one inside the PREFS folder.  There is another scripts directory under
+			the folder labeled with your version of Maya (maya\2018\scripts): if you install here, the script will not work properly.
+
+5.  	Open Maya
+
+6.	 	In the Script Editor or MEL command line, copy and paste the following line below:
+
+			source dp_autoSmoothingGroups.mel;
+
+7.		Save the command above as a shelf button to run at your convenience!
+
+
+
+///////////  Contact
+
+If you come across bugs or have anything else to say, you can send me an email at Dennis.Porter.3D@gmail.com
